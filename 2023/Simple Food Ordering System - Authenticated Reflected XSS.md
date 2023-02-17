@@ -19,6 +19,9 @@
 > process_order.php
 > In this page order parameter are vulnerable to Reflected Cross Site Scripting Attack
 
+### Risk:
+> Reflected cross-site scripting (XSS) is a type of web vulnerability that occurs when a web application fails to properly sanitize user input, allowing an attacker to inject malicious code into the application's response to a user's request. When the user's browser receives the response, the malicious code is executed, potentially allowing the attacker to steal sensitive information or take control of the user's account.
+
 ### Proof of Concept:
 > Initially, I tired to verify the XSS attack, I have used normal XSS payload `<script>alert("Verification");</script>` and Below Image confirmed that, the parameter is vulnerable to relfected xss.
 > ![image](https://user-images.githubusercontent.com/123810418/219716828-62b529c9-8366-4051-8b2c-f9065b158089.png)
