@@ -23,7 +23,7 @@
 ### Proof of Concept:
 > Following steps are involved:
 1. Visit the vulnerable page: changePasswordForEmployee.php
-2. Type any random password which needs to update against any id and submit
+2. Type any random password which needs to update against any user id and submit
 3. Intercept that request through Burp Suite
 4. Request:
 ```
