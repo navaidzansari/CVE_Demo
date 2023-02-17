@@ -21,7 +21,7 @@
 + Admin user has full access to the system 
 + Employee user has only a few menu access i.s. Task Management (view and edit only assigned tasks) and Attendance (clock In and out)
 
-> So, if the admin assigns a task to a normal employee, an employee could perform the SQL Injection by editing that task from his/her profile. Therefore, low-privileged users could able to get the access full system.
+> So, if the admin assigns a task to a normal employee, an employee could perform the SQL Injection by viewing that task from his/her profile. Therefore, low-privileged users could able to get the access full system.
 ### Proof of Concept:
 > Following steps are involved:
 + Admin assigned a task to an employee (ABC)
