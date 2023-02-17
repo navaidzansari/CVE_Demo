@@ -65,6 +65,7 @@ Connection: close
 ```
 Old Code:
 $sql = "SELECT * FROM task_info WHERE task_id='$task_id' ";
+$info = $obj_admin->manage_all_info($sql);
 ```
 
 ```
