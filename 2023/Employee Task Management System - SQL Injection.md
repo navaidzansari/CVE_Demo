@@ -21,7 +21,7 @@
 ### Affected Page:
 > edit-task.php
 
-> In this page task_id parameter is vulnerable to SQL Injection Attack
+> On this page task_id parameter is vulnerable to SQL Injection Attack
 
 ### Description:
 > The employee task management system supports two roles of users, one is admin, and another is a normal employee. the detail of role is given below
