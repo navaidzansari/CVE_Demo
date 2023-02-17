@@ -61,7 +61,7 @@ Connection: close
 ![image](https://user-images.githubusercontent.com/123810418/219764941-37ede104-c4a5-4500-94f2-2fca6e051343.png)
 
 ### Recommendation:
-> Whoever uses this CMS, should update line no 27 of edit-task.php with the following code to avoid SQL Injection attack:
+> Whoever uses this CMS, should update line no 27 and 28 of edit-task.php with the following code to avoid SQL Injection attack:
 ```
 Old Code:
 $sql = "SELECT * FROM task_info WHERE task_id='$task_id' ";
