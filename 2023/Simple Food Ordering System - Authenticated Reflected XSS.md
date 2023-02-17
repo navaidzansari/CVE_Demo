@@ -15,12 +15,15 @@
 ### Version:
 > v 1.0
 
+### What is Reflected Cross-Site Scripting:
+> Reflected cross-site scripting (XSS) is a type of web vulnerability that occurs when a web application fails to properly sanitize user input, allowing an attacker to inject malicious code into the application's response to a user's request. When the user's browser receives the response, the malicious code is executed, potentially allowing the attacker to steal sensitive information or take control of the user's account.
+
 ### Affected Page: 
 > process_order.php
 > In this page order parameter are vulnerable to Reflected Cross Site Scripting Attack
 
-### Risk:
-> Reflected cross-site scripting (XSS) is a type of web vulnerability that occurs when a web application fails to properly sanitize user input, allowing an attacker to inject malicious code into the application's response to a user's request. When the user's browser receives the response, the malicious code is executed, potentially allowing the attacker to steal sensitive information or take control of the user's account.
+### Description:
+> The Reflected XSS found in order parameter of process_order.php page. Authenticated Reflected Cross-Site Scripting (XSS) is a serious vulnerability that can have a significant impact on the security of a web application and its users. The risk of Authenticated Reflected XSS is similar to that of Reflected XSS, but with the added danger that the attacker must first gain access to a valid user account in order to exploit the vulnerability. The main risk associated with Authenticated Reflected XSS is that it can allow an attacker to steal sensitive information or take control of a user's account on a web application. This can include login credentials, financial information, personal information, and more. Once an attacker gains access to a user's account, they can perform any actions that the user is authorized to do. In addition, Authenticated Reflected XSS can also be used as a stepping stone to launch more advanced attacks, such as phishing attacks, malware distribution, or distributed denial-of-service attacks. By gaining control of a user's account on a web application, an attacker can use that account as a launching point for further attacks against the user or the web application itself.
 
 ### Proof of Concept:
 > Initially, I tired to verify the XSS attack, I have used normal XSS payload `<script>alert("Verification");</script>` and Below Image confirmed that, the parameter is vulnerable to relfected xss.
