@@ -1,4 +1,4 @@
-# Auto Dealer Management System - SQL Injection on page view_transaction.php and parameter is id, through application url is (?page=vehicles/view_transaction&id=?) with low privilege authentication
+# Auto Dealer Management System - SQL Injection on page view_transaction.php and parameter is id, application url is (?page=vehicles/view_transaction&id=?) with low privilege authentication
 
 ### Date: 
 > 18 February 2023
