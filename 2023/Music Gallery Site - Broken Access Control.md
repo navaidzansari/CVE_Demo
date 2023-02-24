@@ -2,6 +2,10 @@
 
 ### Date: 
 > 21 February 2023
+
+### CVE Assigned:
+**[CVE-2023-0963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0963)** [mitre.org](https://www.cve.org/CVERecord?id=CVE-2023-0963) [nvd.nist.org](https://nvd.nist.gov/vuln/detail/CVE-2023-0963)
+
 ### Author Email: 
 > navaidnasari@hotmail.co.uk
 ### Vendor Homepage:
