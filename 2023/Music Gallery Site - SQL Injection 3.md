@@ -2,6 +2,11 @@
 > Any remote attacker can access this page to exploit the vulnerbility.
 ### Date: 
 > 21 February 2023
+
+### CVE Assigned:
+**[CVE-2023-0962](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0962)** [mitre.org](https://www.cve.org/CVERecord?id=CVE-2023-0962) [nvd.nist.org](https://nvd.nist.gov/vuln/detail/CVE-2023-0962)
+
+
 ### Author Name: 
 > Muhammad Navaid Zafar Ansari
 ### Author Email: 
