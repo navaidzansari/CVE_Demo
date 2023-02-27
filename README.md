@@ -1,7 +1,7 @@
 # CVE_Demo
 
 Hi,
-Hi, This is Muhammad Navaid Zafar Ansari, I have created this repository to maintain my CVE demos and give the fix recommendation to those people who want to use these applications where I found the vulnerabilities.
+This is Muhammad Navaid Zafar Ansari, I have created this repository to maintain my CVE demos and give the fix recommendation to those people who want to use these applications where I found the vulnerabilities.
 
 ### Disclaimer:
 All the demo's are created only for educational purpose, Do testing your own systems for these vulnerabilities and cannot be used for law violation or personal gain.
