@@ -60,14 +60,14 @@ formToken=%242y%2410%24xOJNdT6NDl5IbdjSWkqQzOPga1ppXRtqP9BiJHvMCnnSWkh97G7w.&ful
 ```
 
 > and when we logged in through admin account we got an alert with cookie.
-
+![image](https://user-images.githubusercontent.com/123810418/234568385-44cb7966-5e4a-4c7a-8d48-a9c87b117c87.png)
 
 
 ### Recommendation: 
-> Whoever uses this CMS, should update line no 41 of process_order.php with the following code to avoid cross-site scripting attack:
+> Whoever uses this CMS, should update line no 40 and 41 of users.php with the following code to avoid cross-site scripting attack:
 ```
-Old Code: <?php echo $_GET['order']; ?>
-New Code: <?php echo htmlspecialchars(strip_tags($_GET['order'])); ?>
+Old Code: <?php echo $_GET['fullname']; ?> and <?php echo $_GET['username']; ?>
+New Code: <?php echo htmlspecialchars(strip_tags($_GET['fullname'])); ?> and <?php echo htmlspecialchars(strip_tags($_GET['username'])); ?>
 ```
 
 Thank you for reading
