@@ -4,7 +4,7 @@
 > 26 April 2023
 
 ### CVE Assigned:
-Pending
+**[CVE-2023-2363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2363)** [mitre.org](https://www.cve.org/CVERecord?id=CVE-2023-2363) [nvd.nist.org](https://nvd.nist.gov/vuln/detail/CVE-2023-2363)
 
 ### Author Name: 
 > Muhammad Navaid Zafar Ansari
